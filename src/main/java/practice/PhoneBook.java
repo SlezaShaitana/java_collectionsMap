@@ -84,11 +84,11 @@ public class PhoneBook {
         }
     */
     public  boolean checkName (String name){
-        return !name.isBlank() && name.matches(regexName);
+        return !name.isBlank() && name.matches(REGEX_NAME);
     }
 
     public boolean checkPhone (String phone) {
-        return !phone.isBlank() && phone.matches(regexNumber);
+        return !phone.isBlank() && phone.matches(REGEX_NUMBER);
     }
     public void replaceContact (String phone, String name) {
         System.out.println("то внутри метода replace на входе");
