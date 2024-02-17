@@ -23,9 +23,9 @@ public class PhoneBook {
                 phoneBook.put(name, phone);
                 System.out.println("Контакт сохранен");
             }
-        } else if(!checkName(name)) {
+        } else if(!checkName(name)){
             System.out.println("Имя введено неверно");
-        } else if(!checkPhone(phone)) {
+        } else if(!checkPhone(phone)){
             System.out.println("Номер введен неверно");
         }
     }
@@ -34,16 +34,17 @@ public class PhoneBook {
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
         String foundName = "";
-        for (Map.Entry<String, String> entry : phoneBook.entrySet()) {
+        for (Map.Entry<String, String> entry : phoneBook.entrySet()){
             String name = entry.getKey();
             String phones = entry.getValue();
             String[] eachPhone = phones.split(", ");
-            for (String i : eachPhone) {
-                if (i.equals(phone)) {
+            for (String i : eachPhone){
+                if (i.equals(phone)){
                     foundName = foundName.concat(name).concat(" - ").concat(phones);
                 }
             }
         }
+
         return foundName;
     }
 
@@ -52,7 +53,7 @@ public class PhoneBook {
         // если контакт не найден - вернуть пустой TreeSet
         TreeSet<String> contactByName = new TreeSet<>();
         StringBuilder stringBuilder = new StringBuilder();
-        if (phoneBook.containsKey(name)) {
+        if (phoneBook.containsKey(name)){
             stringBuilder.append(name).append(" - ").append(phoneBook.get(name));
             contactByName.add(stringBuilder.toString());
         }

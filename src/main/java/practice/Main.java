@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         PhoneBook phoneBook = new PhoneBook();
         Scanner scanner = new Scanner(System.in);
+
         String menu = "Введите номер, имя или команду:";
         String input;
         String name;
@@ -22,12 +23,12 @@ public class Main {
             for (int i = 0; i < input.length(); i++) {
                 if (Character.isDigit(input.charAt(i))) {
                     itIsNumber = true;
-                } else {
+                }
+                else {
                     itIsWord = true;
                 }
             }
         }
-
     }
     public static void clean() {
         String input = "";
