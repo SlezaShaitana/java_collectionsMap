@@ -6,8 +6,8 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class PhoneBook {
-    private static final String regexName = "[A-Za-zA-Яа-я]{3,20}";
-    private static final String regexNumber = ".*9[\\d]{9}";
+    private static final String REGEX_NAME = "[A-Za-zA-Яа-я]{3,20}";
+    private static final String REGEX_NUMBER = ".*9[\\d]{9}";
     private TreeMap<String, String> phoneBook = new TreeMap<>();
 
     public void addContact(String phone, String name) {
